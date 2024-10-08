@@ -12,9 +12,22 @@ const password3 = "supToThis"
 
 
 // **YOUR** code below. Pass those tests!
+function isValidEmail(email){
+  if (email.length < 2){
+    return false;
 
-
-
+  }
+  const domain1 = ".prsvr@gmail.com";
+  const domain2 = "@perseverenow.org";
+if (email.length >= domain1.length){
+  return true;
+}
+  if (email.length >= domain2.length){
+    return true;
+ 
+ return false;
+ }
+}
 // Our code below. Do not touch!
 
 
