@@ -17,7 +17,7 @@ function isValidEmail(email){
   const domain2 = "@perseverenow.org";
   return email.length > domain1.length && email.endsWith(domain1) || email.length > domain2.length && email.endsWith(domain2)
 }
-//ChatGPT help
+
 function isValidPassword(password){
   return (password.length >= 8 && password.toLowerCase() !== password &&  
     password.toUpperCase() !== password 
@@ -29,7 +29,7 @@ function isRegisteredUser(user){
 }
 
 function passwordMatches(user, password){
-  return user === "user1" && password === "password1" && user === "user2" && password === "password2"
+  return (user === user1 && password === password1) || (user === user2 && password === password2) || (user === user3 && password === password3)
 }
 // Our code below. Do not touch!
 
