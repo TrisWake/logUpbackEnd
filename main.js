@@ -13,20 +13,23 @@ const password3 = "supToThis"
 
 // **YOUR** code below. Pass those tests!
 function isValidEmail(email){
-  if (email.length < 2){
-    return false;
-
-  }
   const domain1 = ".prsvr@gmail.com";
   const domain2 = "@perseverenow.org";
-if (email.length >= domain1.length){
-  return true;
+  return email.length > domain1.length && email.endsWith(domain1) || email.length > domain2.length && email.endsWith(domain2)
 }
-  if (email.length >= domain2.length){
-    return true;
- 
- return false;
- }
+//ChatGPT help
+function isValidPassword(password){
+  return (password.length >= 8 && password.toLowerCase() !== password &&  
+    password.toUpperCase() !== password 
+  )
+}
+
+function isRegisteredUser(user){
+  return( user === user1 || user === user2 || user === user3)
+}
+
+function passwordMatches(user, password){
+  return user === "user1" && password === "password1" && user === "user2" && password === "password2"
 }
 // Our code below. Do not touch!
 
